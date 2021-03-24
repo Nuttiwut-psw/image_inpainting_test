@@ -2,8 +2,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 import cv2
 
-img = cv2.imread('data\cat_puke.jpg')     # input
-mask = cv2.imread('data\mask.jpg',0)  # mask
+img = cv2.imread('data\cat_puke.tiff')     # รูป
+mask = cv2.imread('data\mask.tiff',0)      # ลายขีดเขียน
 
 dst_TELEA = cv2.inpaint(img,mask,3,cv2.INPAINT_TELEA)
 dst_NS = cv2.inpaint(img,mask,3,cv2.INPAINT_NS)
